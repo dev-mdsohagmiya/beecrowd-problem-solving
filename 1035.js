@@ -4,27 +4,26 @@
 //  if A is even, write the message “Valores aceitos” (Accepted values).
 //   Otherwise, write the message “Valores nao aceitos”
 //    (Values not accepted).
-//https://www.beecrowd.com.br/judge/en/runs/code/29776797
+// https://www.beecrowd.com.br/judge/en/runs/code/29791068
 
 const readline  =require("readline")
 
 const userInput = readline.createInterface({input:process.stdin,output:process.stdout})
 
 //
-userInput.question("Input 3 integer values separete by space: ",(value)=>{
+userInput.question("",(input)=>{
+ const value = input.split(" ")
  const a = Number(value[0])
  const b = Number(value[1])
  const c = Number(value[2])
  const d = Number(value[3])
  //
- if(b>c && d>a && (c+d)>a+b && c>0 &&  d>0 ){
+ if(b>c && d>a && (c+d)>a+b && c>0 &&  d>0 && a%2 === 0 ){
   console.log("Valores aceitos")
  }
  else{
     console.log("Valores nao aceitos")
  }
 })
-
-
 
 
